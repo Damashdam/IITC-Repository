@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+
+.calculator {
+    background-color: grey;
+    margin: 80px;
+    padding: 30px;
+}
+
+.displayBar {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.displayBar button {
+    background-color: red;
+}
+
+.displayBar .display {
+    background-color: honeydew;
+    width: 150px;
+    text-align: end;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.numbersWrapper {
+    background-color: honeydew;
+    width: 95px;
+}
+
+.numbersWrapper input[type="button"] {
+    border-radius: 50px;
+}
+
+.numbersWrapper input[type="button"]:hover {
+    background-color: rgb(106, 254, 0);
+}
+
+.operators {
+    background-color: honeydew;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+}

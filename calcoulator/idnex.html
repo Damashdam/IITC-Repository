@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="displayBar">
+            <input type="button" value="C" onclick="clearDisplay()">
+            <div class="display">0</div>
+        </div>
+        <div class="buttons">
+            <div class="numbersWrapper">
+                <input type="button" value="1" onclick="addToDisplay('1')">
+                <input type="button" value="2" onclick="addToDisplay('2')">
+                <input type="button" value="3" onclick="addToDisplay('3')">
+                <input type="button" value="4" onclick="addToDisplay('4')">
+                <input type="button" value="5" onclick="addToDisplay('5')">
+                <input type="button" value="6" onclick="addToDisplay('6')">
+                <input type="button" value="7" onclick="addToDisplay('7')">
+                <input type="button" value="8" onclick="addToDisplay('8')">
+                <input type="button" value="9" onclick="addToDisplay('9')">
+                <input type="button" value="0" onclick="addToDisplay('0')">
+            </div>
+
+            <div class="operators">
+                <input type="button" value="-" onclick="operator('-')">
+                <input type="button" value="+" onclick="operator('+')">
+                <input type="button" value="=" onclick="sum()">
+                <input type="button" value="*" onclick="operator('*')">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToDisplay(num) {
+            var display = document.querySelector(".display");
+            display.innerHTML += num;
+        }
+
+        function clearDisplay() {
+            var display = document.querySelector(".display");
+            display.innerHTML = '0';
+        }
+
+        function operator(op) {
+            var display = document.querySelector(".display");
+            var displayValue = display.innerHTML;
+            if (displayValue !== '0') {
+                display.innerHTML += op;
+            }
+        }
+
+        function sum() {
+            var display = document.querySelector(".display");
+            var displayValue = display.innerHTML;
+            var result = eval(displayValue);
+            display.innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

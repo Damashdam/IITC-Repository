@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Jersey+15&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<h1 class="headingClass">Bulls and Cows</h1>
+
+<body>
+    <h2>Discover the hidden code<br>
+        Click, or use arrow keys, to change your guess in each box.<br>
+        (Bulls and Cows is similar to, but came before, the board game MastermindTM*)<br><br>
+        Bulls = correct code, correct position<br><br>
+        Cows = correct code, wrong position<br></h2>
+
+    <div class="gameWrapper">
+        <div class="rowWrapper">
+            <h1 class="randomNumber1">?</h1>
+            <h1 class="randomNumber2">?</h1>
+            <h1 class="randomNumber3">?</h1>
+            <h1 class="randomNumber4">?</h1>
+            <h1 class="bullsCows">bulls</h1>
+            <h1 class="bullsCows">cows</h1>
+        </div>
+        <span class=addedSpan></span>
+        <div class="rowWrapper userRow">
+            <button class="buttons button1">0</button>
+            <button class="buttons button2">1</button>
+            <button class="buttons button3">2</button>
+            <button class="buttons button4">3</button>
+            <span><button class="buttonGo">GO</button></span>
+
+        </div>
+    </div>
+    <button class="newGameButton ">New Game</button>
+
+
+</body>
+<script src="index.js"></script>
+
+</html>

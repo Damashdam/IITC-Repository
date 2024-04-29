@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+body {
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    background-color: hsl(214, 100%, 90%);
+    letter-spacing: 1px;
+
+
+}
+
+.headingClass {
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body h2 {
+
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.gameWrapper {
+    padding: 15px;
+    border-radius: 15px;
+    width: 350px;
+    margin: auto;
+}
+
+.rowWrapper {
+    margin: 10px;
+    padding: 5px;
+    /* text-align: center; */
+    background-color: hsla(60, 100%, 92%, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    border-radius: 15px;
+
+
+}
+
+.rowWrapper .numbersadded {
+    text-align: start;
+}
+
+.buttons {
+    background-color: yellow;
+    width: 35px;
+    height: 45px;
+    border-color: yellowgreen;
+    margin: 5px;
+    font-size: 25px;
+}
+
+.buttonGo {
+    width: 55px;
+    height: 35px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.userRow {
+    justify-content: start;
+
+}
+
+.buttonGo {
+    margin-left: 75px;
+}
+
+.numbersadded {
+    justify-content: start;
+    text-align: start;
+}
+
+.numbersWrapper {
+    margin: 10px;
+    padding: 5px;
+    /* text-align: center; */
+    background-color: hsla(60, 100%, 92%, 1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    border-radius: 15px;
+
+    h1 {
+        margin: 3px;
+        letter-spacing: 20px;
+        margin: auto;
+    }
+
+
+}
+
+
+.newGameButton {
+    background-color: hsla(60, 100%, 92%, 1);
+    width: 150px;
+    height: 70px;
+    border-radius: 15px;
+    border: none;
+}
+
+.h2Style {
+    margin: 0;
+}
+
+.invisible {
+    overflow: hidden;
+}

@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ae12e1;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+
+
+
+.robsImg {
+    width: 500px;
+    border-radius: 1000px;
+    margin-top: 80px;
+
+}
+
+.aboutMeCard {
+    background-color: #fff;
+    margin: 50px;
+    border: solid 10px;
+
+    border-color: rgb(224, 0, 130) #9d008b;
+
+    img {
+        width: 350px;
+    }
+
+    p {
+        margin: 20px;
+        padding: 30px;
+    }
+
+}
+
+.projectsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.project1 {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+
+.project2 {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+
+.project1 img {
+    margin: auto;
+    width: 350px;
+    border-radius: 15px 15px 0 0;
+}
+
+.project2 img {
+    margin: auto;
+    width: 350px;
+    border-radius: 15px 15px 0 0;
+}
+
+.slider {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    width: 350px;
+    margin: auto;
+    height: 70px;
+
+
+
+    h1 {
+        margin: 0;
+        margin: 15px;
+    }
+
+    h2 {
+        display: none;
+        margin: 5px 0;
+    }
+
+    a {
+        display: none;
+        margin: 20px;
+        text-decoration: none;
+        color: blue;
+    }
+
+    &:hover {
+
+        h2,
+        a {
+            display: block;
+        }
+
+
+    }
+}
+
+
+.slider:hover {
+    height: 210px;
+    transition: 0.5s;
+}
+
+footer {
+
+    padding-top: 550px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    padding-top: 100px;
+
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+
+
+
+}
+
+input {
+    width: 150px;
+}
+
+.contact {
+    margin: 50px;
+
+}
+
+.message {
+    margin: 50px;
+
+}
+
+.gap {
+    width: 100px;
+    background-color: #fff;
+}
+
+.textInput {
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px;
+    outline: none;
+    font-size: 15px;
+}
+
+.messageInput {
+    width: 420px;
+    height: 240px;
+    border-radius: 5px;
+    border: solid 1px;
+    outline: none;
+    font-size: 15px;
+}
+
+.submitButton {
+    width: 150px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 5px;
+    border: solid 1px;
+    outline: none;
+    font-size: 15px;
+    background-color: #ae12e1;
+}
+
+@media (max-width: 780px) {
+    .footerWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textInput {
+        width: 350px;
+        height: 50px;
+    }
+
+    .projectsWrapper {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 547px) {
+    .robsImg {
+        width: 250px;
+    }
+
+    .aboutMeCard {
+        img {
+            width: 250px;
+        }
+    }
+
+    .messageInput {
+        width: 350px;
+    }
+}
+
+.creator {
+    height: 50px;
+}
+
+.creatorWebsite {
+    padding: 25px;
+    text-decoration: none;
+}

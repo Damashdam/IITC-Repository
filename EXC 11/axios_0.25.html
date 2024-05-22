@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #loading-bar {
+            width: 0%;
+            height: 10px;
+            background-color: #007bff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: width 5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-bar"></div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Username</th>
+        </tr>
+    </table>
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+    <script>
+        function showLoadingBar() {
+            document.getElementById('loading-bar').style.width = '100%';
+        }
+
+        function hideLoadingBar() {
+            document.getElementById('loading-bar').style.width = '0%';
+        }
+
+        window.onload = function () {
+            showLoadingBar();
+            fetchDataAndPopulateTable();
+        };
+
+        function fetchDataAndPopulateTable() {
+            let users = [];
+            let table = document.querySelector("table");
+
+            const url1 = "https://jsonplaceholder.typicode.com/users";
+
+            axios.get(url1)
+                .then(function (response) {
+                    users = response.data;
+
+                    const url2 = "https://jsonplaceholder.typicode.com/posts";
+
+                    axios.get(url2)
+                        .then(function (response) {
+                            let posts = response.data;
+                            let userName = "";
+                            for (let item of posts) {
+
+                                for (let user of users) {
+                                    if (item.userId == user.id) {
+                                        userName = user.name;
+                                    }
+                                }
+
+                                let row = `<tr><td>${item.title}</td><td>${item.body}</td><td>${userName}</td></tr>`
+                                table.innerHTML += row;
+                            }
+                            displayUsers();
+                            hideLoadingBar();
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+
+        function displayUsers() {
+            let combinedData = '';
+            for (let i = 0; i < users.length; i++) {
+                combinedData += JSON.stringify(users[i]) + '\n\n';
+            }
+            DomH3.innerHTML = combinedData;
+        }
+    </script>
+
+</body>
+
+</html>

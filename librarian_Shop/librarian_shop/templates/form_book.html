@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <include src="./header.html"></include>
+    </div>
+    <div id="content" class="form_book">
+        <h2 class="createABookH2">Create a Book</h2>
+        <div class="create_book">
+            <form action="" id="create_book_form">
+                <input type="text" class="createInputs" name="img_url_form" placeholder="Image URL" required>
+                <input type="text" class="createInputs" name="title_book_form" placeholder="Book title" required>
+                <input type="text" class="createInputs" name="authors_book_form" placeholder="Authors" required>
+                <input type="text" class="createInputs" name="book_published_form" placeholder="Date of publish"
+                    required>
+                <input type="text" class="createInputs" name="book_isbn_form" placeholder=" ISBN" required>
+                <input type="text" class="createInputs" name="book_page_count_form" placeholder=" Pages" required>
+                <input type="text" class="createInputs" name="book_publisher_form" placeholder="Name of publisher" required>
+                <input type="text" class="createInputs" name="book_language_form" placeholder="Language" required>
+                <textarea name="book_description_form" class= "textarea" placeholder="Description"></textarea>
+                <button type="submit" class="createButton">Create book</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer">
+        <include src="./footer.html"></include>
+    </div>
+    <div class='container_loader hidden'>
+        <div class="loader">
+
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/routs.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script type="module" src="../assets/js/script.js"></script>
+</body>
+
+</html>

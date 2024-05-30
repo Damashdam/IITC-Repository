@@ -1,0 +1,36 @@
+<div class="header">
+    <div class="logo">
+        <a href="./home.html"><img src="../assets/images/logo.png" alt="Logo">
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." class="search_input">
+        <button type="button" class="btn_search">Search</button>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./form_book.html">Create</a></li>
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./favorites.html">Favorites</a></li>
+        </ul>
+        <select id="navbar-dropdown" class="navbar-dropdown" onchange="navigateToPage()">
+            <option value="./home.html">Home</option>
+            <option value="./form_book.html">Create</option>
+            <option value="./history.html">History</option>
+            <option value="./favorites.html">Favorites</option>
+        </select>
+    </nav>
+</div>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script>
+
+    document.getElementById('navbar-dropdown').addEventListener('change', function () {
+        var url = this.value;
+        if (url) {
+            window.location.href = url;
+        }
+    });
+
+</script>

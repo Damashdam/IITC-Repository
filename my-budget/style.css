@@ -1,0 +1,390 @@
+body {
+    margin: 0;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    user-select: none;
+}
+
+.available_section {
+    position: relative;
+    background-image: url('./images/avail_img.jpeg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.income,
+.expences {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000070;
+    z-index: 0;
+}
+
+.available_content {
+    z-index: 1;
+    min-width: 350px;
+    text-align: center;
+    padding-block: 30px;
+}
+
+.available_content>* {
+    margin-block: 10px;
+}
+
+div#amount {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#income_text,
+#expences_text {
+    flex: 3;
+    text-align: left;
+    text-transform: uppercase;
+    color: black;
+    font-size: 0.73rem;
+    font-weight: 500;
+}
+
+#income_value,
+#expences_value {
+    flex: 2;
+    text-align: right;
+}
+
+#income_rate,
+#expences_rate {
+    flex: 1;
+    text-align: right;
+}
+
+.income {
+    background: #32A5A1;
+    box-shadow: 0 0 10px 0 #32a5a2;
+}
+
+.expences {
+    background: #F63237;
+    box-shadow: 0 0 10px 0 #f73237;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.secondSection {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e3e3;
+    gap: 15px;
+    padding-block: 10px;
+
+}
+
+.selectedPlusMinus {
+    height: 37px;
+    width: 50px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    appearance: none;
+    background-image: url('./images/select-arrows.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+    background-size: 0.65rem auto;
+    border: 0;
+}
+
+.selectedPlusMinus:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.description {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+.value {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px 5px 5px 10px;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.checkButton {
+    width: 50px;
+    height: 34px;
+    background-color: rgb(227, 227, 227);
+    border-style: none;
+
+}
+
+a.btnDelete i {
+    font-size: 1rem;
+}
+
+.checkButton i {
+    font-size: 1.8rem;
+
+}
+
+.thirdSection {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+
+}
+
+.leftDiv {
+    width: 50%;
+    padding: 50px;
+    padding: 15px 10px 0 10px;
+
+}
+
+.rightDiv {
+    width: 50%;
+    padding: 15px 10px 0 10px;
+
+}
+
+
+
+.incomeH1 {
+    color: #32A5A1;
+    padding: 5px;
+    border-bottom: 1px solid;
+    font-size: large;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+
+
+}
+
+.expensesH1 {
+    color: #F63237;
+    padding: 5px;
+    border-bottom: 1px solid;
+    font-size: large;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+
+}
+
+.headerH2 {
+    font-size: large;
+    font-weight: 700;
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.rowWrapper {
+    display: flex;
+    border-bottom: 1px solid grey;
+}
+
+.rowWrapper:hover {
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+}
+
+.precentage {
+    display: flex;
+    margin: 10px;
+    background-color: #ffa5a8;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: small;
+    font-weight: 550;
+    color: red;
+}
+
+.money {
+    padding-left: 10px;
+    display: flex;
+    margin: 10px;
+
+
+}
+
+.moneyIncome {
+    color: green;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+
+}
+
+.moneyExpenses {
+    color: red;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-size: large;
+    font-style: normal;
+
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.greenSection #descriptionOperation {
+    border: 2px solid green;
+}
+
+.redSection #descriptionOperation {
+    border: 2px solid red;
+}
+
+.greenSection .checkButton i {
+    color: green
+}
+
+.redSection .checkButton i {
+    color: red;
+}
+
+.btnDelete {
+    width: 0;
+    opacity: 0;
+    transition: 0.4s;
+    margin: 5px;
+}
+
+.rowWrapper:hover .btnDelete {
+    width: 30px;
+    opacity: 1;
+}
+
+.btnDelete {
+    font-size: large;
+    font-weight: 600;
+    margin: auto;
+}
+
+#expences_rate {
+    background: #ff7074;
+    text-align: center;
+    max-width: 40px;
+    font-size: 0.8rem;
+    padding: 3px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#income_rate {
+    max-width: 40px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 580px) {
+    .precentage {
+        margin: auto;
+        padding: 0 5px 0 5px;
+
+    }
+
+    .moneyExpenses {
+        margin: auto;
+        padding: 0 5px 0 5px;
+
+    }
+
+    .btnDelete {
+        padding: 0 3px 0 3px;
+
+    }
+
+    .selectedPlusMinus {
+        margin: 5px;
+    }
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .description input {
+        justify-content: space-between;
+    }
+
+    .thirdSection {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .secondSection {
+        display: flex;
+        align-items: center;
+    }
+
+    .leftDiv {
+        width: 300px;
+    }
+
+    .rightDiv {
+        width: 300px;
+
+    }
+
+    .selectedPlusMinus {
+        min-width: 50px;
+    }
+}
